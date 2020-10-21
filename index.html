@@ -1,0 +1,38 @@
+<html>
+  <title>Firebase-Firestore-Example</title>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Firebase - Firestore - Example</h1>
+
+    <div class="content">
+      <form id="add-coffee-form">
+        <input type="text" name="name" placeholder="coffee name" />
+        <input type="text" name="place" placeholder="where to buy" />
+        <button>Add Coffee</button>
+      </form>
+
+      <ul id="add-coffee-list"></ul>
+    </div>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "API_KEY",
+        authDomain: "AUTH_DOMAIN",
+        databaseURL: "DB_URL",
+        projectId: "ID",
+        storageBucket: "STORAGE_BUCKET",
+        messagingSenderId: "SENDER_ID",
+        appId: "APP_ID",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      //   db.settings({timestampsInSnapshots: true});
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
